@@ -82,6 +82,12 @@
 
 					</nav>
 
+					<?php if ( is_active_sidebar( 'search-widget' ) ) : ?>
+
+						<?php dynamic_sidebar( 'search-widget' ); ?>
+
+					<?php endif; ?>
+
 				</div>
 
 			</header>
