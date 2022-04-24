@@ -41,6 +41,9 @@ the whole project.
 // the grid
 @import "partials/grid";
 
+// home
+@import "partials/home";
+
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.
@@ -115,6 +118,17 @@ This is for the larger monitors and possibly full screen viewers.
 
 	// styles in 1240up.scss
 	@import "breakpoints/1240up";
+
+} // end of media query
+
+/*********************
+EXTRA LARGE VIEWING SIZE
+This is for the extra large monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1920px) {
+
+	// styles in 1920up.scss
+	@import "breakpoints/1920up";
 
 } // end of media query
 

@@ -923,6 +923,13 @@ them however you see fit.
     width: 8.33%;
   }
 }
+.hero {
+  background-image: url(http://www.hcdigital.co.uk/london-minster/wp-content/uploads/header-banner@2x.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.
@@ -991,22 +998,21 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
 .btn, #submit, .comment-reply-link {
-  display: inline-block;
-  position: relative;
-  font-family: "Futura PT Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-family: "Playfair Display", "Georgia", Cambria, Times New Roman, Times, serif;
   text-decoration: none;
   color: #FFFFFF;
-  font-size: 0.9em;
-  font-size: 34px;
-  line-height: 34px;
+  font-size: 20px;
+  line-height: 20px;
   font-weight: normal;
-  padding: 0 24px;
-  border-radius: 4px;
-  border: 0;
+  padding: 0 31px;
+  border: 1px solid;
   cursor: pointer;
-  transition: background-color 0.14s ease-in-out;
 }
-.btn:hover, #submit:hover, .comment-reply-link:hover, .btn:focus, #submit:focus, .comment-reply-link:focus {
+.btn:hover, #submit:hover, .comment-reply-link:hover, .btn:focus, #submit:focus, .comment-reply-link:focus, .btn:visited, #submit:visited, .comment-reply-link:visited {
   color: #FFFFFF;
   text-decoration: none;
   outline: none;
@@ -1021,10 +1027,10 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 .btn:hover, #submit:hover, .comment-reply-link:hover, .btn:focus, #submit:focus, .comment-reply-link:focus {
-  background-color: #8e99b3;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .btn:active, #submit:active, .comment-reply-link:active {
-  background-color: #7f8ca8;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /******************************************************************
@@ -1077,7 +1083,7 @@ textarea,
   border: 0;
   width: 100%;
   max-width: 400px;
-  font-family: "Futura PT Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Futura PT", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #EBEBE9;
   transition: background-color 0.24s ease-in-out;
 }
@@ -1359,8 +1365,8 @@ body {
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 96%;
-  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /*********************
@@ -1412,13 +1418,13 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 1.125em;
-  font-family: "Futura PT Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Futura PT", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h4, .h4 {
   font-size: 1.1em;
   font-weight: 700;
-  font-family: "Futura PT Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Futura PT", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h5, .h5 {
@@ -1426,21 +1432,35 @@ h5, .h5 {
   line-height: 2.09em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-family: "Futura PT Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Futura PT", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*********************
 HEADER STYLES
 *********************/
 .header {
-  background-color: #000;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 0.2s;
+}
+.header.active {
+  background-color: #FFFFFF;
+}
+.header.active .nav li a {
+  color: #001a2c;
 }
 
-#logo {
-  margin: 0.75em 0;
+.inner-header {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 69px;
 }
-#logo a {
-  color: #FFFFFF;
+.inner-header > .btn, .inner-header > #submit, .inner-header > .comment-reply-link {
+  margin-left: 15px;
+}
+.inner-header .widget_search {
+  display: none;
 }
 
 /*********************
@@ -1468,10 +1488,44 @@ and more scalable.
   */
 }
 .nav li a {
-  display: block;
+  display: flex;
+  align-items: center;
+  height: 50px;
   color: #FFFFFF;
   text-decoration: none;
-  padding: 0.75em;
+  padding: 0 20px;
+  font-family: "Futura PT", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav li.menu-item-has-children {
+  position: relative;
+}
+.nav li.menu-item-has-children:after, .nav li.menu-item-has-children:before {
+  content: " ";
+  position: absolute;
+  background-color: #D3A878;
+  height: 6px;
+  width: 1.5px;
+  top: 21px;
+  transform: rotate(45deg);
+  right: 18px;
+  transition: 0.2s;
+}
+.nav li.menu-item-has-children:before {
+  right: 21px;
+  transform: rotate(-45deg);
+}
+.nav li.menu-item-has-children > a {
+  padding-right: 28px;
+}
+.nav li.menu-item-has-children:hover:before {
+  transform: rotate(45deg);
+}
+.nav li.menu-item-has-children:hover:after {
+  transform: rotate(-45deg);
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -1482,10 +1536,6 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-#content {
-  margin-top: 1.5em;
-}
-
 .hentry {
   background-color: #FFFFFF;
   border-radius: 3px;
@@ -1955,7 +2005,8 @@ you can add resource intensive styles.
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    width: 760px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   /*********************
@@ -2104,7 +2155,8 @@ you can add resource intensive styles.
 
   ******************************************************************/
   .wrap {
-    width: 1040px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 /*********************
@@ -2122,6 +2174,20 @@ This is for the larger monitors and possibly full screen viewers.
   on larger screens.
 
   ******************************************************************/
+  .wrap {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+/*********************
+EXTRA LARGE VIEWING SIZE
+This is for the extra large monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1920px) {
+  .wrap {
+    padding-left: calc((100vw - 1600px) / 2);
+    padding-right: calc((100vw - 1600px) / 2);
+  }
 }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
