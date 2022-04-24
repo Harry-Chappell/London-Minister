@@ -16,7 +16,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+	font-family: $serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
@@ -134,11 +134,13 @@ h2, .h2 {
 
 h3, .h3 {
 	font-size: 1.125em;
+	font-family: $sans-serif;
 }
 
 h4, .h4 {
 	font-size: 1.1em;
 	font-weight: 700;
+	font-family: $sans-serif;
 }
 
 h5, .h5 {
@@ -146,6 +148,7 @@ h5, .h5 {
 	line-height: 2.09em;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	font-family: $sans-serif;
 }
 
 /*********************

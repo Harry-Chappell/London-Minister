@@ -49,14 +49,9 @@ I've edited it a bit, but it's a nice starting point.
 
 
 // font stacks
-$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$sans-serif:        "Futura PT Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Playfair Display", "Georgia", Cambria, Times New Roman, Times, serif;
 
-/*
- i imported this one in the functions file so bones would look sweet.
- don't forget to remove it for your site.
-*/
-$lato:              'Lato', $sans-serif;
 
 /*
 some nice typographical defaults
@@ -70,10 +65,6 @@ p {
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
           hyphens: auto;
-  // sets a minimum number of characters before and after the break
-  -webkit-hyphenate-before: 2;
-   -webkit-hyphenate-after: 3;
-           hyphenate-lines: 3;
   // enabling fancy ligatures when available
   -webkit-font-feature-settings: "liga", "dlig";
    -moz-font-feature-settings: "liga=1, dlig=1";
