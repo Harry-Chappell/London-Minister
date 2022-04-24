@@ -347,7 +347,7 @@ body#tinymce.wp-editor {
   font-family: "Playfair Display", "Georgia", Cambria, Times New Roman, Times, serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #5c6b80;
+  color: #001a2c;
   -webkit-font-smoothing: antialiased;
   /*********************
   LINK STYLES
@@ -616,12 +616,12 @@ body#tinymce.wp-editor p {
   font-feature-settings: "liga", "dlig";
 }
 body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
-  color: #f01d4f;
+  color: #D3A878;
   /* on hover */
   /* on click */
 }
 body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
-  color: #d10e3c;
+  color: #c89255;
 }
 body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
@@ -660,7 +660,7 @@ body#tinymce.wp-editor p {
 }
 body#tinymce.wp-editor table {
   width: 100%;
-  border: 1px solid #eaedf2;
+  border: 1px solid #EBEBE9;
   margin-bottom: 1.5em;
 }
 body#tinymce.wp-editor table caption {
@@ -671,22 +671,22 @@ body#tinymce.wp-editor table caption {
   letter-spacing: 1px;
 }
 body#tinymce.wp-editor tr {
-  border-bottom: 1px solid #eaedf2;
+  border-bottom: 1px solid #EBEBE9;
 }
 body#tinymce.wp-editor tr:nth-child(even) {
-  background-color: #f8f9fa;
+  background-color: #F2F1EF;
 }
 body#tinymce.wp-editor td {
   padding: 7px;
-  border-right: 1px solid #eaedf2;
+  border-right: 1px solid #EBEBE9;
 }
 body#tinymce.wp-editor td:last-child {
   border-right: 0;
 }
 body#tinymce.wp-editor th {
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #eaedf2;
-  border-right: 1px solid #eaedf2;
+  background-color: #F2F1EF;
+  border-bottom: 1px solid #EBEBE9;
+  border-right: 1px solid #EBEBE9;
 }
 body#tinymce.wp-editor th:last-child {
   border-right: 0;
@@ -694,7 +694,7 @@ body#tinymce.wp-editor th:last-child {
 body#tinymce.wp-editor blockquote {
   margin: 0 0 1.5em 0.75em;
   padding: 0 0 0 0.75em;
-  border-left: 3px solid #2980b9;
+  border-left: 3px solid #9DA7BD;
   font-style: italic;
   color: #9fa6b4;
 }
@@ -718,8 +718,8 @@ body#tinymce.wp-editor .size-thumbnail {
   height: auto;
 }
 body#tinymce.wp-editor pre {
-  background: #323944;
-  color: #f8f9fa;
+  background: #000;
+  color: #F2F1EF;
   font-size: 0.9em;
   padding: 1.5em;
   margin: 0 0 1.5em;
