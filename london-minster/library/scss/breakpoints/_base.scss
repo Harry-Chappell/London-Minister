@@ -31,8 +31,8 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
-	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 /*********************
@@ -111,16 +111,34 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
-}
+	position: absolute;
+	width: 100%;
+	background-color: rgba(white, 0);
+	transition: 0.2s;
 
-	#logo {
-		margin: 0.75em 0;
+	&.active {
+		background-color: $white;
 
-		a {
-			color: $white;
+		.nav li a {
+			color: $primary;
 		}
 	}
+}
+
+.inner-header {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 69px;
+
+	&> .btn {
+		margin-left: 15px;
+	}
+
+	// temporary hide
+	.widget_search {
+		display: none;
+	}
+}
 
 /*********************
 NAVIGATION STYLES
@@ -141,10 +159,51 @@ and more scalable.
 	li {
 
 		a {
-			display: block;
+			display: flex;
+			align-items: center;
+			height: 50px;
 			color: $white;
 			text-decoration: none;
-			padding: 0.75em;
+			padding: 0 20px;
+			font-family: $sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-weight: 500;
+			transition: color 0.2s;
+		}
+
+		&.menu-item-has-children {
+			position: relative;
+
+			&:after, &:before {
+				content: " ";
+				position: absolute;
+				background-color: $secondary;
+				height: 6px;
+				width: 1.5px;
+				top: 21px;
+				transform: rotate(45deg);
+				right: 18px;
+				transition: 0.2s;
+			}
+
+			&:before {
+				right: 21px;
+				transform: rotate(-45deg);
+			}
+
+			&> a {
+				padding-right: 28px;
+			}
+
+			&:hover {
+				&:before {
+					transform: rotate(45deg);
+				}
+				&:after {
+					transform: rotate(-45deg);
+				}
+			}
 		}
 
 		/*
@@ -176,10 +235,6 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-
-#content {
-	margin-top: 1.5em;
-}
 
 		.hentry {
 			background-color: $white;
