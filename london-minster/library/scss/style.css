@@ -990,7 +990,7 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, #submit, .comment-reply-link {
+.btn, #submit, .comment-reply-link {
   display: inline-block;
   position: relative;
   font-family: "Futura PT Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1006,12 +1006,12 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   cursor: pointer;
   transition: background-color 0.14s ease-in-out;
 }
-.blue-btn:hover, #submit:hover, .comment-reply-link:hover, .blue-btn:focus, #submit:focus, .comment-reply-link:focus {
+.btn:hover, #submit:hover, .comment-reply-link:hover, .btn:focus, #submit:focus, .comment-reply-link:focus {
   color: #fff;
   text-decoration: none;
   outline: none;
 }
-.blue-btn:active, #submit:active, .comment-reply-link:active {
+.btn:active, #submit:active, .comment-reply-link:active {
   top: 1px;
 }
 
@@ -1020,14 +1020,11 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn, #submit, .comment-reply-link {
-  background-color: #2980b9;
-}
-.blue-btn:hover, #submit:hover, .comment-reply-link:hover, .blue-btn:focus, #submit:focus, .comment-reply-link:focus {
-  background-color: #2574a8;
-}
-.blue-btn:active, #submit:active, .comment-reply-link:active {
+.btn:hover, #submit:hover, .comment-reply-link:hover, .btn:focus, #submit:focus, .comment-reply-link:focus {
   background-color: #2472a4;
+}
+.btn:active, #submit:active, .comment-reply-link:active {
+  background-color: #20638f;
 }
 
 /******************************************************************
@@ -1358,45 +1355,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/********************
-WORDPRESS BODY CLASSES
-style a page via class
-********************/
-/* for sites that are read right to left (i.e. hebrew) */
-/* home page */
-/* blog template page */
-/* archive page */
-/* date archive page */
-/* replace the number to the corresponding page number */
-/* search page */
-/* search result page */
-/* no results search page */
-/* individual paged search (i.e. body.search-paged-3) */
-/* 404 page */
-/* single post page */
-/* individual post page by id (i.e. body.postid-73) */
-/* individual paged single (i.e. body.single-paged-3) */
-/* attatchment page */
-/* individual attatchment page (i.e. body.attachmentid-763) */
-/* style mime type pages */
-/* author page */
-/* user nicename (i.e. body.author-samueladams) */
-/* paged author archives (i.e. body.author-paged-4) for page 4 */
-/* category page */
-/* individual category page (i.e. body.category-6) */
-/* replace the number to the corresponding page number */
-/* tag page */
-/* individual tag page (i.e. body.tag-news) */
-/* replace the number to the corresponding page number */
-/* custom page template page */
-/* individual page template (i.e. body.page-template-contact-php */
-/* replace the number to the corresponding page number */
-/* parent page template */
-/* child page template */
-/* replace the number to the corresponding page number */
-/* if user is logged in */
-/* paged items like search results or archives */
-/* individual paged (i.e. body.paged-3) */
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -1411,7 +1369,6 @@ LINK STYLES
 a, a:visited {
   color: #f01d4f;
   /* on hover */
-  /* on click */
   /* mobile tap color */
 }
 a:hover, a:focus, a:visited:hover, a:visited:focus {
@@ -1500,8 +1457,6 @@ and more scalable.
   border-bottom: 0;
   margin: 0;
   /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */
 }
 .nav li {
   /*
@@ -1517,17 +1472,12 @@ and more scalable.
   color: #fff;
   text-decoration: none;
   padding: 0.75em;
-  /*
-  remember this is for mobile ONLY, so there's no need
-  to even declare hover styles here, you can do it in
-  the style.scss file where it's relevant. We want to
-  keep this file as small as possible!
-  */
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 30px;
 }
+
 /* end .nav */
 /*********************
 POSTS & CONTENT STYLES
@@ -1561,30 +1511,16 @@ POSTS & CONTENT STYLES
   margin: 0;
 }
 
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
   color: #9fa6b4;
   font-style: italic;
   margin: 0;
 }
+
 /* entry content */
 .entry-content {
   padding: 1.5em 1.5em 0;
-  /*
-  image alignment on a screen this size may be
-  a bit difficult. It's set to start aligning
-  and floating images at the next breakpoint,
-  but it's up to you. Feel free to change it up.
-  */
 }
 .entry-content p {
   margin: 0 0 1.5em;
@@ -1676,9 +1612,6 @@ POSTS & CONTENT STYLES
 }
 
 /* end .wp-caption */
-/* image gallery styles */
-/* end .gallery */
-/* gallery caption styles */
 .tags {
   margin: 0;
 }
@@ -1753,8 +1686,8 @@ COMMENT STYLES
   padding: 0.75em;
   margin: 0;
   border-top: 1px solid #f8f9fa;
-  /* number of comments span */
 }
+
 .commentlist {
   margin: 0;
   list-style-type: none;
@@ -1804,8 +1737,6 @@ COMMENT STYLES
 }
 .comment .children {
   margin: 0;
-  /* variations */
-  /* change number for different depth */
 }
 .comment[class*=depth-] {
   margin-top: 1.1em;
@@ -1825,7 +1756,7 @@ COMMENT STYLES
 .comment.even {
   background: #f8f9fa;
 }
-/* comment meta */
+
 /* comment content */
 .comment_content p {
   margin: 0.7335em 0 1.5em;
@@ -1839,6 +1770,7 @@ COMMENT STYLES
   font-size: 0.9em;
   float: right;
 }
+
 /* end .commentlist .comment-reply-link */
 /* edit comment link */
 .comment-edit-link {
@@ -1890,8 +1822,6 @@ COMMENT FORM STYLES
   margin: 0 0 1.1em;
 }
 
-/* cancel comment reply link */
-/* logged in comments */
 /* allowed tags */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
@@ -1903,21 +1833,6 @@ COMMENT FORM STYLES
 }
 
 /*********************
-SIDEBARS & ASIDES
-*********************/
-.widget ul li {
-  /* deep nesting */
-}
-.no-widgets {
-  background-color: #fff;
-  padding: 1.5em;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  margin-bottom: 1.5em;
-}
-
-/*********************
 FOOTER STYLES
 *********************/
 .footer {
@@ -1926,16 +1841,6 @@ FOOTER STYLES
   color: #f8f9fa;
 }
 
-/*
-if you checked out the link above:
-http://www.alistapart.com/articles/organizing-mobile/
-you'll want to style the footer nav
-a bit more in-depth. Remember to keep
-it simple because you'll have to
-override these styles for the desktop
-view.
-*/
-/* end .footer-links */
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
