@@ -1478,15 +1478,6 @@ and more scalable.
   margin: 0;
   /* end .menu li */
 }
-.nav li {
-  /*
-  so you really have to rethink your dropdowns for mobile.
-  you don't want to have it expand too much because the
-  screen is so small. How you manage your menu should
-  depend on the project. Here's some great info on it:
-  http://www.alistapart.com/articles/organizing-mobile/
-  */
-}
 .nav li a {
   display: flex;
   align-items: center;
@@ -1501,9 +1492,13 @@ and more scalable.
   transition: color 0.2s;
 }
 .nav li.menu-item-has-children {
+  position: static;
+}
+.nav li.menu-item-has-children > a {
+  padding-right: 28px;
   position: relative;
 }
-.nav li.menu-item-has-children:after, .nav li.menu-item-has-children:before {
+.nav li.menu-item-has-children > a:after, .nav li.menu-item-has-children > a:before {
   content: " ";
   position: absolute;
   background-color: #D3A878;
@@ -1514,22 +1509,15 @@ and more scalable.
   right: 18px;
   transition: 0.2s;
 }
-.nav li.menu-item-has-children:before {
+.nav li.menu-item-has-children > a:before {
   right: 21px;
   transform: rotate(-45deg);
 }
-.nav li.menu-item-has-children > a {
-  padding-right: 28px;
-}
-.nav li.menu-item-has-children:hover:before {
+.nav li.menu-item-has-children:hover > a:before {
   transform: rotate(45deg);
 }
-.nav li.menu-item-has-children:hover:after {
+.nav li.menu-item-has-children:hover > a:after {
   transform: rotate(-45deg);
-}
-.nav li ul.sub-menu li a,
-.nav li ul.children li a {
-  padding-left: 30px;
 }
 
 /* end .nav */
@@ -2022,7 +2010,7 @@ you can add resource intensive styles.
     /* end current highlighters */
   }
   .nav ul {
-    background: #000;
+    background: #FFFFFF;
     margin-top: 0;
   }
   .nav li {
@@ -2046,12 +2034,16 @@ you can add resource intensive styles.
   }
   .nav li ul.sub-menu,
 .nav li ul.children {
-    margin-top: 0;
-    border: 1px solid #ccc;
-    border-top: 0;
+    border-bottom: 8px solid #D3A878;
     position: absolute;
     visibility: hidden;
     z-index: 8999;
+    left: 0;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s, opacity 0.2s;
+    opacity: 0;
     /* highlight sub-menu current page */
   }
   .nav li ul.sub-menu li,
@@ -2084,6 +2076,12 @@ you can add resource intensive styles.
     visibility: visible;
   }
   /* end .nav */
+  header.active .nav li > ul {
+    max-height: 300px;
+    height: 300px;
+    opacity: 1;
+  }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/

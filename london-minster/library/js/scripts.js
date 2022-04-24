@@ -1,3 +1,8 @@
+
+
+
+// Apply "active" class to header when certain things are hovered over.
+
 document.addEventListener('DOMContentLoaded', function () {
   var header = document.querySelector('header.header');
   var parentNavItems = document.getElementsByClassName('menu-item-has-children');

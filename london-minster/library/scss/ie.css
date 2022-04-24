@@ -269,7 +269,7 @@ NAVIGATION STYLES
   /* end current highlighters */
 }
 .nav ul {
-  background: #000;
+  background: #FFFFFF;
   margin-top: 0;
 }
 .nav li {
@@ -293,12 +293,16 @@ NAVIGATION STYLES
 }
 .nav li ul.sub-menu,
 .nav li ul.children {
-  margin-top: 0;
-  border: 1px solid #ccc;
-  border-top: 0;
+  border-bottom: 8px solid #D3A878;
   position: absolute;
   visibility: hidden;
   z-index: 8999;
+  left: 0;
+  width: 100%;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s, opacity 0.2s;
+  opacity: 0;
   /* highlight sub-menu current page */
 }
 .nav li ul.sub-menu li,
@@ -331,6 +335,12 @@ NAVIGATION STYLES
   visibility: visible;
 }
 /* end .nav */
+header.active .nav li > ul {
+  max-height: 300px;
+  height: 300px;
+  opacity: 1;
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
