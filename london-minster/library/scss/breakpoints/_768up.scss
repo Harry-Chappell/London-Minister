@@ -58,8 +58,8 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				color: $white;
-				text-decoration: underline;
+				color: $secondary;
+				text-decoration: none;
 			}
 		}
 
@@ -124,12 +124,12 @@ NAVIGATION STYLES
 						text-decoration: none;
 
 						img {
-							opacity: 0.8;
+							// opacity: 0.8;
 						}
 
 						span {
 							text-decoration: none;
-							opacity: 0.8;
+							// opacity: 0.8;
 
 							:before {
 								text-decoration: none;
@@ -183,10 +183,15 @@ NAVIGATION STYLES
 
 } /* end .nav */
 
-header.active .nav li > ul {
-	max-height: 300px;
-	height: 300px;
-	opacity: 1;
+header.active .nav li  { 
+	a:hover {
+		color: $secondary;
+	}
+	&> ul {
+		max-height: 300px;
+		height: 300px;
+		opacity: 1;
+	}
 }
 /*********************
 SIDEBARS & ASIDES

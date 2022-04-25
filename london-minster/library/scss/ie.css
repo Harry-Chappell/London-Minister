@@ -289,8 +289,8 @@ NAVIGATION STYLES
   */
 }
 .nav li a:hover, .nav li a:focus {
-  color: #FFFFFF;
-  text-decoration: underline;
+  color: #D3A878;
+  text-decoration: none;
 }
 .nav li ul.sub-menu,
 .nav li ul.children {
@@ -356,16 +356,10 @@ NAVIGATION STYLES
 .nav li ul.children li a:focus {
   text-decoration: none;
 }
-.nav li ul.sub-menu li a:hover img, .nav li ul.sub-menu li a:focus img,
-.nav li ul.children li a:hover img,
-.nav li ul.children li a:focus img {
-  opacity: 0.8;
-}
 .nav li ul.sub-menu li a:hover span, .nav li ul.sub-menu li a:focus span,
 .nav li ul.children li a:hover span,
 .nav li ul.children li a:focus span {
   text-decoration: none;
-  opacity: 0.8;
 }
 .nav li ul.sub-menu li a:hover span :before, .nav li ul.sub-menu li a:focus span :before,
 .nav li ul.children li a:hover span :before,
@@ -386,6 +380,9 @@ NAVIGATION STYLES
   visibility: visible;
 }
 /* end .nav */
+header.active .nav li a:hover {
+  color: #D3A878;
+}
 header.active .nav li > ul {
   max-height: 300px;
   height: 300px;

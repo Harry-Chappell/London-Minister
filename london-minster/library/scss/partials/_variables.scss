@@ -44,7 +44,7 @@ $green:             #7dd667;
 $bones-pink:        $service-purple;
 $blue:              $light-blue;
 $link-color:        $life-gold;
-$link-hover:        darken($link-color, 9%);
+$link-hover:        $link-color;
 
 $border-color:      $life-gold;
 $disabled-gray:     #cfcfcf;

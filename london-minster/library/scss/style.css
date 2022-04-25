@@ -1010,7 +1010,10 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.btn, #submit, .comment-reply-link {
+a.btn, a.comment-reply-link,
+.btn,
+#submit,
+.comment-reply-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1025,12 +1028,22 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   border: 1px solid;
   cursor: pointer;
 }
-.btn:hover, #submit:hover, .comment-reply-link:hover, .btn:focus, #submit:focus, .comment-reply-link:focus, .btn:visited, #submit:visited, .comment-reply-link:visited {
+.btn:hover,
+#submit:hover,
+.comment-reply-link:hover,
+.btn:focus,
+#submit:focus,
+.comment-reply-link:focus,
+.btn:visited,
+#submit:visited,
+.comment-reply-link:visited {
   color: #FFFFFF;
   text-decoration: none;
   outline: none;
 }
-.btn:active, #submit:active, .comment-reply-link:active {
+.btn:active,
+#submit:active,
+.comment-reply-link:active {
   top: 1px;
 }
 
@@ -1039,11 +1052,28 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.btn:hover, #submit:hover, .comment-reply-link:hover, .btn:focus, #submit:focus, .comment-reply-link:focus {
-  background-color: rgba(255, 255, 255, 0.05);
+a.btn:hover, a.btn:visited, a.btn:visited:hover, a.btn:focus,
+.btn:hover,
+#submit:hover,
+.comment-reply-link:hover,
+.btn:visited,
+#submit:visited,
+.comment-reply-link:visited,
+.btn:visited:hover,
+.btn:focus,
+#submit:focus,
+.comment-reply-link:focus {
+  background-color: #D3A878;
+  border-color: #D3A878;
+  color: white;
 }
-.btn:active, #submit:active, .comment-reply-link:active {
-  background-color: rgba(255, 255, 255, 0.1);
+a.btn:active,
+.btn:active,
+#submit:active,
+.comment-reply-link:active {
+  background-color: #D3A878;
+  border-color: #D3A878;
+  color: white;
 }
 
 /******************************************************************
@@ -1412,7 +1442,7 @@ a, a:visited {
   /* mobile tap color */
 }
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #c89255;
+  color: #D3A878;
 }
 a:link, a:visited:link {
   /*
@@ -1599,7 +1629,7 @@ and more scalable.
 }
 .header.active .nav li a.donate-large:hover {
   text-decoration: none;
-  opacity: 0.8;
+  color: #D3A878;
 }
 
 .header.active .nav li:nth-of-type(4n - 1) ul.sub-menu {
@@ -2140,8 +2170,8 @@ you can add resource intensive styles.
     */
   }
   .nav li a:hover, .nav li a:focus {
-    color: #FFFFFF;
-    text-decoration: underline;
+    color: #D3A878;
+    text-decoration: none;
   }
   .nav li ul.sub-menu,
 .nav li ul.children {
@@ -2207,16 +2237,10 @@ you can add resource intensive styles.
 .nav li ul.children li a:focus {
     text-decoration: none;
   }
-  .nav li ul.sub-menu li a:hover img, .nav li ul.sub-menu li a:focus img,
-.nav li ul.children li a:hover img,
-.nav li ul.children li a:focus img {
-    opacity: 0.8;
-  }
   .nav li ul.sub-menu li a:hover span, .nav li ul.sub-menu li a:focus span,
 .nav li ul.children li a:hover span,
 .nav li ul.children li a:focus span {
     text-decoration: none;
-    opacity: 0.8;
   }
   .nav li ul.sub-menu li a:hover span :before, .nav li ul.sub-menu li a:focus span :before,
 .nav li ul.children li a:hover span :before,
@@ -2237,6 +2261,9 @@ you can add resource intensive styles.
     visibility: visible;
   }
   /* end .nav */
+  header.active .nav li a:hover {
+    color: #D3A878;
+  }
   header.active .nav li > ul {
     max-height: 300px;
     height: 300px;
