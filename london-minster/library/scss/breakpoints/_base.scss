@@ -30,7 +30,7 @@ body {
 LAYOUT & GRID STYLES
 *********************/
 
-.wrap {
+.wrap, ul.sub-menu {
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -118,8 +118,9 @@ HEADER STYLES
 
 	&.active {
 		background-color: $white;
+		padding-bottom: 25px;
 
-		.nav li a {
+		.nav li a, .btn {
 			color: $primary;
 		}
 	}
@@ -128,10 +129,11 @@ HEADER STYLES
 .inner-header {
 	display: flex;
 	justify-content: flex-end;
-	padding-top: 69px;
+	// padding-top: 69px;
 
 	&> .btn {
 		margin-left: 15px;
+		margin-top: 69px;
 	}
 
 	// temporary hide
@@ -160,11 +162,11 @@ and more scalable.
 
 		a {
 			display: flex;
-			align-items: center;
-			height: 50px;
+			align-items: flex-end;
+			height: 119px;
 			color: $white;
 			text-decoration: none;
-			padding: 0 20px;
+			padding: 0 20px 9px;
 			font-family: $sans-serif;
 			text-transform: uppercase;
 			letter-spacing: 3px;
@@ -185,7 +187,7 @@ and more scalable.
 					background-color: $secondary;
 					height: 6px;
 					width: 1.5px;
-					top: 21px;
+					top: 95px;
 					transform: rotate(45deg);
 					right: 18px;
 					transition: 0.2s;
@@ -196,7 +198,7 @@ and more scalable.
 					transform: rotate(-45deg);
 				}
 			}
-			
+
 			&:hover > a {
 				&:before {
 					transform: rotate(45deg);

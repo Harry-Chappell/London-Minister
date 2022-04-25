@@ -925,7 +925,8 @@ them however you see fit.
 }
 .hero {
   background-image: url(http://www.hcdigital.co.uk/london-minster/wp-content/uploads/header-banner@2x.jpg);
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 1080px;
   background-size: cover;
   background-position: center;
 }
@@ -1364,7 +1365,7 @@ body {
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-.wrap {
+.wrap, ul.sub-menu {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -1446,18 +1447,19 @@ HEADER STYLES
 }
 .header.active {
   background-color: #FFFFFF;
+  padding-bottom: 25px;
 }
-.header.active .nav li a {
+.header.active .nav li a, .header.active .btn, .header.active #submit, .header.active .comment-reply-link {
   color: #001a2c;
 }
 
 .inner-header {
   display: flex;
   justify-content: flex-end;
-  padding-top: 69px;
 }
 .inner-header > .btn, .inner-header > #submit, .inner-header > .comment-reply-link {
   margin-left: 15px;
+  margin-top: 69px;
 }
 .inner-header .widget_search {
   display: none;
@@ -1480,11 +1482,11 @@ and more scalable.
 }
 .nav li a {
   display: flex;
-  align-items: center;
-  height: 50px;
+  align-items: flex-end;
+  height: 119px;
   color: #FFFFFF;
   text-decoration: none;
-  padding: 0 20px;
+  padding: 0 20px 9px;
   font-family: "Futura PT", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -1504,7 +1506,7 @@ and more scalable.
   background-color: #D3A878;
   height: 6px;
   width: 1.5px;
-  top: 21px;
+  top: 95px;
   transform: rotate(45deg);
   right: 18px;
   transition: 0.2s;
@@ -1992,7 +1994,7 @@ you can add resource intensive styles.
   /*********************
   LAYOUT & GRID STYLES
   *********************/
-  .wrap {
+  .wrap, ul.sub-menu {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -2044,23 +2046,69 @@ you can add resource intensive styles.
     overflow: hidden;
     transition: max-height 0.2s, opacity 0.2s;
     opacity: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
     /* highlight sub-menu current page */
   }
   .nav li ul.sub-menu li,
 .nav li ul.children li {
+    display: flex;
+    align-items: center;
     /*
     if you need to go deeper, go nuts
     just remember deeper menus suck
     for usability. k, bai.
     */
   }
+  .nav li ul.sub-menu li:not(:first-of-type),
+.nav li ul.children li:not(:first-of-type) {
+    margin-left: 60px;
+  }
   .nav li ul.sub-menu li a,
 .nav li ul.children li a {
-    padding-left: 10px;
-    border-right: 0;
-    display: block;
-    width: 180px;
-    border-bottom: 1px solid #ccc;
+    height: auto;
+    padding: 0;
+  }
+  .nav li ul.sub-menu li a img,
+.nav li ul.children li a img {
+    width: 220px;
+    height: 145px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .nav li ul.sub-menu li a span,
+.nav li ul.children li a span {
+    text-align: left;
+  }
+  .nav li ul.sub-menu li a span:before,
+.nav li ul.children li a span:before {
+    content: "—";
+    color: #D3A878;
+    padding-right: 10px;
+  }
+  .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
+.nav li ul.children li a:hover,
+.nav li ul.children li a:focus {
+    text-decoration: none;
+  }
+  .nav li ul.sub-menu li a:hover img, .nav li ul.sub-menu li a:focus img,
+.nav li ul.children li a:hover img,
+.nav li ul.children li a:focus img {
+    opacity: 0.8;
+  }
+  .nav li ul.sub-menu li a:hover span, .nav li ul.sub-menu li a:focus span,
+.nav li ul.children li a:hover span,
+.nav li ul.children li a:focus span {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  .nav li ul.sub-menu li a:hover span :before, .nav li ul.sub-menu li a:focus span :before,
+.nav li ul.children li a:hover span :before,
+.nav li ul.children li a:focus span :before {
+    text-decoration: none;
   }
   .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
@@ -2152,7 +2200,7 @@ you can add resource intensive styles.
   be seen on the Desktop.
 
   ******************************************************************/
-  .wrap {
+  .wrap, ul.sub-menu {
     padding-left: 100px;
     padding-right: 100px;
   }
@@ -2172,7 +2220,7 @@ This is for the larger monitors and possibly full screen viewers.
   on larger screens.
 
   ******************************************************************/
-  .wrap {
+  .wrap, ul.sub-menu {
     padding-left: 160px;
     padding-right: 160px;
   }
@@ -2182,7 +2230,7 @@ EXTRA LARGE VIEWING SIZE
 This is for the extra large monitors and possibly full screen viewers.
 *********************/
 @media only screen and (min-width: 1920px) {
-  .wrap {
+  .wrap, ul.sub-menu {
     padding-left: calc((100vw - 1600px) / 2);
     padding-right: calc((100vw - 1600px) / 2);
   }

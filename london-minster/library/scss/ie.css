@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******************************************************************
 Site Name:
 Author:
@@ -251,7 +252,7 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-.wrap {
+.wrap, ul.sub-menu {
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -303,23 +304,69 @@ NAVIGATION STYLES
   overflow: hidden;
   transition: max-height 0.2s, opacity 0.2s;
   opacity: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
   /* highlight sub-menu current page */
 }
 .nav li ul.sub-menu li,
 .nav li ul.children li {
+  display: flex;
+  align-items: center;
   /*
   if you need to go deeper, go nuts
   just remember deeper menus suck
   for usability. k, bai.
   */
 }
+.nav li ul.sub-menu li:not(:first-of-type),
+.nav li ul.children li:not(:first-of-type) {
+  margin-left: 60px;
+}
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
-  padding-left: 10px;
-  border-right: 0;
-  display: block;
-  width: 180px;
-  border-bottom: 1px solid #ccc;
+  height: auto;
+  padding: 0;
+}
+.nav li ul.sub-menu li a img,
+.nav li ul.children li a img {
+  width: 220px;
+  height: 145px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.nav li ul.sub-menu li a span,
+.nav li ul.children li a span {
+  text-align: left;
+}
+.nav li ul.sub-menu li a span:before,
+.nav li ul.children li a span:before {
+  content: "—";
+  color: #D3A878;
+  padding-right: 10px;
+}
+.nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
+.nav li ul.children li a:hover,
+.nav li ul.children li a:focus {
+  text-decoration: none;
+}
+.nav li ul.sub-menu li a:hover img, .nav li ul.sub-menu li a:focus img,
+.nav li ul.children li a:hover img,
+.nav li ul.children li a:focus img {
+  opacity: 0.8;
+}
+.nav li ul.sub-menu li a:hover span, .nav li ul.sub-menu li a:focus span,
+.nav li ul.children li a:hover span,
+.nav li ul.children li a:focus span {
+  text-decoration: none;
+  opacity: 0.8;
+}
+.nav li ul.sub-menu li a:hover span :before, .nav li ul.sub-menu li a:focus span :before,
+.nav li ul.children li a:hover span :before,
+.nav li ul.children li a:focus span :before {
+  text-decoration: none;
 }
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
@@ -403,7 +450,7 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-.wrap {
+.wrap, ul.sub-menu {
   padding-left: 100px;
   padding-right: 100px;
 }

@@ -23,7 +23,7 @@ body {}
 LAYOUT & GRID STYLES
 *********************/
 
-.wrap {
+.wrap, ul.sub-menu {
 	padding-left: 50px;
 	padding-right: 50px;
 }
@@ -81,20 +81,57 @@ NAVIGATION STYLES
 			overflow: hidden;
 			transition: max-height 0.2s, opacity 0.2s;
 			opacity: 0;
+			padding-top: 25px;
+			padding-bottom: 25px;
+			display: flex;
+			align-content: center;
+			justify-content: flex-end;
 
 			li {
+				display: flex;
+				align-items: center;
+
+				&:not(:first-of-type) {
+					margin-left: 60px;
+				}
 
 				a {
-					padding-left: 10px;
-					border-right: 0;
-					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
+					height: auto;
+					padding: 0;
+
+					img {
+						width: 220px;
+						height: 145px;
+						object-fit: cover;
+					}
+
+					span {
+						text-align: left;
+
+						&:before {
+							content: "—";
+							color: $life-gold;
+							padding-right: 10px;
+						}
+					}
 
 					&:hover,
-					&:focus {}
+					&:focus {
+						text-decoration: none;
 
-					&:link {}
+						img {
+							opacity: 0.8;
+						}
+
+						span {
+							text-decoration: none;
+							opacity: 0.8;
+
+							:before {
+								text-decoration: none;
+							}
+						}
+					}
 				}
 
 				&:first-child {}

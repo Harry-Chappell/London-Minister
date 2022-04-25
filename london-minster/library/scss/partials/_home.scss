@@ -1,6 +1,7 @@
 .hero {
     background-image: url(http://www.hcdigital.co.uk/london-minster/wp-content/uploads/header-banner@2x.jpg);
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 1080px;
     background-size: cover;
     background-position: center;
 }
