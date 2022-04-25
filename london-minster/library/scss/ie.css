@@ -307,7 +307,7 @@ NAVIGATION STYLES
   padding-top: 25px;
   padding-bottom: 25px;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: flex-end;
   /* highlight sub-menu current page */
 }
@@ -327,8 +327,12 @@ NAVIGATION STYLES
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
-  height: auto;
+  height: 192px;
   padding: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 .nav li ul.sub-menu li a img,
 .nav li ul.children li a img {

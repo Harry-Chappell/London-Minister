@@ -84,7 +84,7 @@ NAVIGATION STYLES
 			padding-top: 25px;
 			padding-bottom: 25px;
 			display: flex;
-			align-content: center;
+			align-items: center;
 			justify-content: flex-end;
 
 			li {
@@ -96,8 +96,12 @@ NAVIGATION STYLES
 				}
 
 				a {
-					height: auto;
+					height: 192px;
 					padding: 0;
+					display: flex;
+					flex-flow: column;
+					align-items: flex-start;
+					justify-content: space-between;
 
 					img {
 						width: 220px;

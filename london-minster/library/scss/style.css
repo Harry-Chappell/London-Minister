@@ -688,6 +688,10 @@ There are four types, but you can add or customize
 them however you see fit.
 */
 @media (max-width: 767px) {
+  .m-hide {
+    display: none !important;
+  }
+
   .m-all {
     float: left;
     padding-right: 0.75em;
@@ -727,6 +731,10 @@ them however you see fit.
 }
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
+  .t-hide {
+    display: none !important;
+  }
+
   .t-all {
     float: left;
     padding-right: 0.75em;
@@ -790,6 +798,10 @@ them however you see fit.
 }
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
+  .d-hide {
+    display: none !important;
+  }
+
   .d-all {
     float: left;
     padding-right: 0.75em;
@@ -1331,6 +1343,22 @@ select {
   background-position: 97.5% center;
 }
 
+.border-left {
+  border-left: 5px solid #D3A878;
+}
+
+.border-top {
+  border-top: 5px solid #D3A878;
+}
+
+.border-right {
+  border-right: 5px solid #D3A878;
+}
+
+.border-bottom {
+  border-bottom: 5px solid #D3A878;
+}
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -1360,6 +1388,11 @@ body {
   background-color: #EBEBE9;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.hide,
+.hide-until-load:not(.show) {
+  display: none !important;
 }
 
 /*********************
@@ -1523,6 +1556,49 @@ and more scalable.
 }
 
 /* end .nav */
+.header.active .nav li a.donate-large {
+  display: flex;
+  width: 455px;
+  height: 192px;
+  background: #001a2c;
+  color: white;
+  justify-content: space-between;
+  padding: 0;
+  align-items: unset;
+  font-family: "Playfair Display", "Georgia", Cambria, Times New Roman, Times, serif;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+  transition: 0s;
+  margin-right: auto;
+}
+.header.active .nav li a.donate-large div {
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  justify-content: space-between;
+  width: calc(100% - 200px);
+}
+.header.active .nav li a.donate-large h2 {
+  margin: 0;
+}
+.header.active .nav li a.donate-large span:before {
+  content: "—";
+  color: #D3A878;
+  padding-right: 10px;
+}
+.header.active .nav li a.donate-large img {
+  width: 200px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header.active .nav li a.donate-large:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -2049,7 +2125,7 @@ you can add resource intensive styles.
     padding-top: 25px;
     padding-bottom: 25px;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: flex-end;
     /* highlight sub-menu current page */
   }
@@ -2069,8 +2145,12 @@ you can add resource intensive styles.
   }
   .nav li ul.sub-menu li a,
 .nav li ul.children li a {
-    height: auto;
+    height: 192px;
     padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
   }
   .nav li ul.sub-menu li a img,
 .nav li ul.children li a img {

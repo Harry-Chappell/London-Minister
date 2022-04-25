@@ -25,6 +25,10 @@ body {
   	-moz-osx-font-smoothing: grayscale;
 }
 
+.hide,
+.hide-until-load:not(.show) {
+	display: none !important;
+}
 
 /*********************
 LAYOUT & GRID STYLES
@@ -212,6 +216,54 @@ and more scalable.
 	} /* end .menu li */
 
 } /* end .nav */
+
+
+.header.active .nav li a.donate-large {
+    display: flex;
+    width: 455px;
+    height: 192px;
+    background: $primary;
+	color: white;
+	justify-content: space-between;
+	padding: 0;
+	align-items: unset;
+    font-family: $serif;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 500;
+    transition: 0s;
+	margin-right: auto;
+
+	div {
+		padding: 20px;
+		display: flex;
+		flex-flow: column;
+		height: 100%;
+		justify-content: space-between;
+		width: calc(100% - 200px);
+	}
+
+	h2 {
+		margin: 0;
+	}
+
+	span:before {
+		content: "—";
+		color: $life-gold;
+		padding-right: 10px;
+	}
+
+	img {
+		width: 200px;
+		height: auto;
+		object-fit: cover;
+	}
+
+	&:hover {
+		text-decoration: none;
+		opacity: 0.8;
+	}
+}
 
 
 /*********************
