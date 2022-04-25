@@ -941,6 +941,55 @@ them however you see fit.
   max-height: 1080px;
   background-size: cover;
   background-position: center;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  padding-top: 120px;
+}
+.hero > h1 {
+  margin-top: auto;
+}
+.hero > h2 {
+  margin-bottom: auto;
+}
+
+.featured-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+a.featured-link,
+a.featured-link:visited {
+  display: flex;
+  width: calc((100% - 100px) / 3);
+  height: 165px;
+  text-decoration: none;
+  color: white;
+}
+a.featured-link:hover,
+a.featured-link:visited:hover {
+  color: #D3A878;
+}
+a.featured-link div,
+a.featured-link:visited div {
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+a.featured-link h2,
+a.featured-link:visited h2 {
+  margin: 0;
+}
+a.featured-link span:before,
+a.featured-link:visited span:before {
+  content: "—";
+  color: #D3A878;
+  padding-right: 10px;
 }
 
 /*********************
@@ -1389,6 +1438,49 @@ select {
   border-bottom: 5px solid #D3A878;
 }
 
+.bg-primary-blue,
+.bg-dark-blue,
+.bg-primary {
+  background-color: #001a2c;
+}
+
+.bg-light-blue,
+.bg-blue {
+  background-color: #9DA7BD;
+}
+
+.bg-religion-green,
+.bg-green {
+  background-color: #07622D;
+}
+
+.bg-events-red,
+.bg-red {
+  background-color: #AB2522;
+}
+
+.bg-service-purple,
+.bg-purple {
+  background-color: #94386F;
+}
+
+.bg-life-gold,
+.bg-secondary {
+  background-color: #D3A878;
+}
+
+.bg-grey {
+  background-color: #EBEBE9;
+}
+
+.bg-background {
+  background-color: #F2F1EF;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -1470,19 +1562,20 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 }
 
 h1, .h1 {
-  font-size: 2.5em;
-  line-height: 1.333em;
+  font-size: 100px;
+  line-height: 1;
+  margin: 0 0 25px;
 }
 
 h2, .h2 {
-  font-size: 1.75em;
+  font-size: 40px;
   line-height: 1.4em;
-  margin-bottom: 0.375em;
+  margin: 0;
 }
 
 h3, .h3 {
-  font-size: 1.125em;
-  font-family: "Futura PT", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75em;
+  margin: 0;
 }
 
 h4, .h4 {

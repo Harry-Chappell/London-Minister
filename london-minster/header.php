@@ -96,7 +96,7 @@
 				<a class="donate-small"></a>
 				<a class="donate-large border-left hide-until-load" href="#">
 					<div>
-						<h2>Make a donation to the Minster</h2>
+						<h3>Make a donation to the Minster</h3>
 						<span>Find out more</span>
 					</div>
 					<img src="<?php echo home_url(); ?>/wp-content/uploads/Image@2x.jpg">

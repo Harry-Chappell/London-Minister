@@ -23,7 +23,7 @@
 
 			<section class="hero wrap">
 
-				<h1>A warm welcome to London Minster</h1>
+				<h1>A warm welcome <br>to London Minster</h1>
 				<h2>The heart of London for over 900 years</h2>
 
 				<div class="featured-links">
@@ -31,7 +31,7 @@
 					<a class="featured-link" href="#">
 						<img src="<?php echo home_url(); ?>/wp-content/uploads/Minster-Hero@2x.jpg" alt="Minster Hero">
 						<div class="border-right bg-dark-blue">
-							<h2>Services at London Minster</h2>
+							<h3>Services at London Minster</h3>
 							<span>View our service times</span>
 						</div>
 					</a>
@@ -39,7 +39,7 @@
 					<a class="featured-link" href="#">
 						<img src="<?php echo home_url(); ?>/wp-content/uploads/Candle-Hero@2x.jpg" alt="Candle Hero">
 						<div class="border-right bg-purple">
-							<h2>Light a Candle</h2>
+							<h3>Light a Candle</h3>
 							<span>Discover more here</span>
 						</div>
 					</a>
@@ -47,7 +47,7 @@
 					<a class="featured-link" href="#">
 						<img src="<?php echo home_url(); ?>/wp-content/uploads/Coffee@2x.jpg" alt="Coffee Hero">
 						<div class="border-right bg-green">
-							<h2>Visit the Minster Coffee Shop</h2>
+							<h3>Visit the Minster Coffee Shop</h3>
 							<span>View our opening times</span>
 						</div>
 					</a>

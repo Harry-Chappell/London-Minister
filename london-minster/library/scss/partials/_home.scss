@@ -4,4 +4,54 @@
     max-height: 1080px;
     background-size: cover;
     background-position: center;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    padding-top: 120px;
+
+    &> h1 {
+        margin-top: auto;
+    }
+    &> h2 {
+        margin-bottom: auto;
+    }
+}
+
+.featured-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+a.featured-link, 
+a.featured-link:visited {
+    display: flex;
+    width: calc((100% - (50px * 2)) / 3);
+    height: 165px;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        color: $secondary;
+    }
+
+    div {
+        width: 100%;
+        padding: 20px 30px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    span:before {
+        content: "—";
+        color: $secondary;
+        padding-right: 10px;
+    }
 }
