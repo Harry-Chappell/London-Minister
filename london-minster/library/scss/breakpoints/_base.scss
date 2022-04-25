@@ -127,6 +127,10 @@ HEADER STYLES
 		.nav li a, .btn {
 			color: $primary;
 		}
+
+		.btn:hover {
+			color: $secondary;
+		}
 	}
 }
 
@@ -265,6 +269,41 @@ and more scalable.
 	}
 }
 
+
+
+.header.active .nav li:nth-of-type(4n - 1) ul.sub-menu {
+	border-color: $service-purple;
+
+	a.donate-large {
+		background-color: $service-purple;
+	}
+
+	li a span:before {
+		color: $service-purple;
+	}
+}
+.header.active .nav li:nth-of-type(4n) ul.sub-menu {
+	border-color: $events-red;
+
+	a.donate-large {
+		background-color: $events-red;
+	}
+
+	li a span:before {
+		color: $events-red;
+	}
+}
+.header.active .nav li:nth-of-type(4n + 1) ul.sub-menu {
+	border-color: $religion-green;
+
+	a.donate-large {
+		background-color: $religion-green;
+	}
+
+	li a span:before {
+		color: $religion-green;
+	}
+}
 
 /*********************
 POSTS & CONTENT STYLES

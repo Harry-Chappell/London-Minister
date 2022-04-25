@@ -1485,6 +1485,9 @@ HEADER STYLES
 .header.active .nav li a, .header.active .btn, .header.active #submit, .header.active .comment-reply-link {
   color: #001a2c;
 }
+.header.active .btn:hover, .header.active #submit:hover, .header.active .comment-reply-link:hover {
+  color: #D3A878;
+}
 
 .inner-header {
   display: flex;
@@ -1597,6 +1600,36 @@ and more scalable.
 .header.active .nav li a.donate-large:hover {
   text-decoration: none;
   opacity: 0.8;
+}
+
+.header.active .nav li:nth-of-type(4n - 1) ul.sub-menu {
+  border-color: #94386F;
+}
+.header.active .nav li:nth-of-type(4n - 1) ul.sub-menu a.donate-large {
+  background-color: #94386F;
+}
+.header.active .nav li:nth-of-type(4n - 1) ul.sub-menu li a span:before {
+  color: #94386F;
+}
+
+.header.active .nav li:nth-of-type(4n) ul.sub-menu {
+  border-color: #AB2522;
+}
+.header.active .nav li:nth-of-type(4n) ul.sub-menu a.donate-large {
+  background-color: #AB2522;
+}
+.header.active .nav li:nth-of-type(4n) ul.sub-menu li a span:before {
+  color: #AB2522;
+}
+
+.header.active .nav li:nth-of-type(4n + 1) ul.sub-menu {
+  border-color: #07622D;
+}
+.header.active .nav li:nth-of-type(4n + 1) ul.sub-menu a.donate-large {
+  background-color: #07622D;
+}
+.header.active .nav li:nth-of-type(4n + 1) ul.sub-menu li a span:before {
+  color: #07622D;
 }
 
 /*********************
