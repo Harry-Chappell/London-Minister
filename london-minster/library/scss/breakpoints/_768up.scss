@@ -81,31 +81,33 @@ NAVIGATION STYLES
 			overflow: hidden;
 			transition: max-height 0.2s, opacity 0.2s;
 			opacity: 0;
-			padding-top: 25px;
+			padding-top: 50px;
 			padding-bottom: 25px;
 			display: flex;
-			align-items: center;
 			justify-content: flex-end;
+			flex-flow: row wrap;
 
 			li {
 				display: flex;
 				align-items: center;
+				margin-bottom: 25px;
 
 				&:not(:first-of-type) {
-					margin-left: 60px;
+					margin-left: 40px;
 				}
 
 				a {
-					height: 192px;
+					height: 175px;
 					padding: 0;
 					display: flex;
 					flex-flow: column;
 					align-items: flex-start;
 					justify-content: space-between;
+					font-size: 14px;
 
 					img {
-						width: 220px;
-						height: 145px;
+						width: 200px;
+						height: 135px;
 						object-fit: cover;
 					}
 
@@ -188,8 +190,8 @@ header.active .nav li  {
 		color: $secondary;
 	}
 	&> ul {
-		max-height: 300px;
-		height: 300px;
+		max-height: 600px;
+		height: auto;
 		opacity: 1;
 	}
 }

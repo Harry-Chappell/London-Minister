@@ -31,12 +31,17 @@ a.featured-link,
 a.featured-link:visited {
     display: flex;
     width: calc((100% - (50px * 2)) / 3);
-    height: 165px;
+    height: 150px;
     text-decoration: none;
     color: white;
 
     &:hover {
         color: $secondary;
+    }
+
+    img {
+        width: 170px;
+        object-fit: cover;
     }
 
     div {
@@ -58,6 +63,25 @@ a.featured-link:visited {
     }
 }
 
+@media (max-width: 1499px) {
+
+    a.featured-link, 
+    a.featured-link:visited {
+        height: unset;
+        flex-flow: column;
+
+        img {
+            width: 100%;
+            height: 100px;
+        }
+
+        div {
+            height: 125px;
+            padding: 10px 30px;
+        }
+    }
+    
+}
 
 
 // Today Section
@@ -70,14 +94,18 @@ a.featured-link:visited {
 }
 
 .today--cntr {
-    background-image: url(http://www.hcdigital.co.uk/london-minster/wp-content/uploads/Minster-Inside@2x.jpg);
-    background-size: 50% auto;
-    background-repeat: no-repeat;
-    background-position-x: right;
+    display: flex;
+    width: calc(100% / 1.5);
 
     &> div {
         padding: 50px;
+        width: 50%;
     }
+}
+
+.today--img {
+    width: 50%;
+    object-fit: cover;
 }
 
 .today--events-cntr {
@@ -135,8 +163,30 @@ a.today--link:visited {
 
 .today--about-cntr {
     padding-left: 50px;
+    width: calc(100% / 3);
 
     p {
         margin: 40px 0 30px;
+    }
+}
+
+@media (max-width: 1499px) {
+    .today--cntr > div {
+        padding: 50px 40px;
+    }
+    .today--events-cntr table {
+        font-size: 13.5px;
+    }
+    .today--about-cntr {
+        padding-left: 40px;
+    }
+}
+@media (max-width: 1239px) {
+    .today--cntr > div {
+        padding: 50px 40px;
+        width: 55%;
+    }
+    .today--img {
+        width: 45%;
     }
 }

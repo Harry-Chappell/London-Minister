@@ -56,8 +56,8 @@
 			</section>
 
 			<section class="today wrap cf">
-				<div class="today--cntr d-2of3 t-1of2 m-all">
-					<div class="bg-white border-top d-1of2 t-all m-all">
+				<div class="today--cntr">
+					<div class="bg-white border-top">
 						<h4 class="today--date"><?php echo date("l d M Y"); ?></h4>
 						<h2 class="today--title">Today at London Minster</h2>
 						<?php
@@ -106,9 +106,11 @@
 							<?php echo file_get_contents( home_url() . '/wp-content/svgs/Button-Circle-1.svg' ); ?>
 						</a>
 					</div>
+
+					<img class="today--img" src="<?php echo home_url(); ?>/wp-content/uploads/Minster-Inside@2x.jpg" alt="Minster Inside">
 				</div>
 
-				<div class="today--about-cntr d-1of3 t-1of2 m-all">
+				<div class="today--about-cntr">
 					<h4>About London Minster</h4>
 					<h2>What makes the Minster special</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus justo, aliquam a pulvinar vitae, consequat eget nisi. Aenean feugiat in enim nec commodo. Donec volutpat enim enim, at laoreet augue varius vitae. Morbi diam leo, suscipit at placerat eget, convallis et ligula.</p>

@@ -304,17 +304,18 @@ NAVIGATION STYLES
   overflow: hidden;
   transition: max-height 0.2s, opacity 0.2s;
   opacity: 0;
-  padding-top: 25px;
+  padding-top: 50px;
   padding-bottom: 25px;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+  flex-flow: row wrap;
   /* highlight sub-menu current page */
 }
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   display: flex;
   align-items: center;
+  margin-bottom: 25px;
   /*
   if you need to go deeper, go nuts
   just remember deeper menus suck
@@ -323,21 +324,22 @@ NAVIGATION STYLES
 }
 .nav li ul.sub-menu li:not(:first-of-type),
 .nav li ul.children li:not(:first-of-type) {
-  margin-left: 60px;
+  margin-left: 40px;
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
-  height: 192px;
+  height: 175px;
   padding: 0;
   display: flex;
   flex-flow: column;
   align-items: flex-start;
   justify-content: space-between;
+  font-size: 14px;
 }
 .nav li ul.sub-menu li a img,
 .nav li ul.children li a img {
-  width: 220px;
-  height: 145px;
+  width: 200px;
+  height: 135px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -384,8 +386,8 @@ header.active .nav li a:hover {
   color: #D3A878;
 }
 header.active .nav li > ul {
-  max-height: 300px;
-  height: 300px;
+  max-height: 600px;
+  height: auto;
   opacity: 1;
 }
 
@@ -451,9 +453,12 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-.wrap, ul.sub-menu {
-  padding-left: 50px;
-  padding-right: 50px;
+h1, .h1 {
+  font-size: 70px;
+}
+
+h2, .h2 {
+  font-size: 25px;
 }
 
 /*

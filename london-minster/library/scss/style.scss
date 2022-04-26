@@ -131,10 +131,10 @@ This is for the larger monitors and possibly full screen viewers.
 EXTRA LARGE VIEWING SIZE
 This is for the extra large monitors and possibly full screen viewers.
 *********************/
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1500px) {
 
-	// styles in 1920up.scss
-	@import "breakpoints/1920up";
+	// styles in 1500up.scss
+	@import "breakpoints/1500up";
 
 } // end of media query
 

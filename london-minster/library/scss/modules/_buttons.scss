@@ -38,6 +38,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   padding: 0 31px;
   border: 1px solid;
   cursor: pointer;
+  white-space: nowrap;
 
   // hovering on the btn
   &:hover, &:focus, &:visited, &:visited:hover {
