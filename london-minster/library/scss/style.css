@@ -556,9 +556,9 @@ p {
   -ms-word-wrap: break-word;
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-      hyphens: auto;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig";
@@ -678,7 +678,6 @@ over your project's layout.
 ******************************************************************/
 .last-col {
   float: right;
-  padding-right: 0 !important;
 }
 
 /*
@@ -694,38 +693,32 @@ them however you see fit.
 
   .m-all {
     float: left;
-    padding-right: 0.75em;
     width: 100%;
     padding-right: 0;
   }
 
   .m-1of2 {
     float: left;
-    padding-right: 0.75em;
     width: 50%;
   }
 
   .m-1of3 {
     float: left;
-    padding-right: 0.75em;
     width: 33.33%;
   }
 
   .m-2of3 {
     float: left;
-    padding-right: 0.75em;
     width: 66.66%;
   }
 
   .m-1of4 {
     float: left;
-    padding-right: 0.75em;
     width: 25%;
   }
 
   .m-3of4 {
     float: left;
-    padding-right: 0.75em;
     width: 75%;
   }
 }
@@ -737,62 +730,52 @@ them however you see fit.
 
   .t-all {
     float: left;
-    padding-right: 0.75em;
     width: 100%;
     padding-right: 0;
   }
 
   .t-1of2 {
     float: left;
-    padding-right: 0.75em;
     width: 50%;
   }
 
   .t-1of3 {
     float: left;
-    padding-right: 0.75em;
     width: 33.33%;
   }
 
   .t-2of3 {
     float: left;
-    padding-right: 0.75em;
     width: 66.66%;
   }
 
   .t-1of4 {
     float: left;
-    padding-right: 0.75em;
     width: 25%;
   }
 
   .t-3of4 {
     float: left;
-    padding-right: 0.75em;
     width: 75%;
   }
 
   .t-1of5 {
     float: left;
-    padding-right: 0.75em;
     width: 20%;
   }
 
   .t-2of5 {
     float: left;
-    padding-right: 0.75em;
     width: 40%;
   }
 
   .t-3of5 {
     float: left;
-    padding-right: 0.75em;
     width: 60%;
   }
 
   .t-4of5 {
     float: left;
-    padding-right: 0.75em;
     width: 80%;
   }
 }
@@ -804,134 +787,112 @@ them however you see fit.
 
   .d-all {
     float: left;
-    padding-right: 0.75em;
     width: 100%;
     padding-right: 0;
   }
 
   .d-1of2 {
     float: left;
-    padding-right: 0.75em;
     width: 50%;
   }
 
   .d-1of3 {
     float: left;
-    padding-right: 0.75em;
     width: 33.33%;
   }
 
   .d-2of3 {
     float: left;
-    padding-right: 0.75em;
     width: 66.66%;
   }
 
   .d-1of4 {
     float: left;
-    padding-right: 0.75em;
     width: 25%;
   }
 
   .d-3of4 {
     float: left;
-    padding-right: 0.75em;
     width: 75%;
   }
 
   .d-1of5 {
     float: left;
-    padding-right: 0.75em;
     width: 20%;
   }
 
   .d-2of5 {
     float: left;
-    padding-right: 0.75em;
     width: 40%;
   }
 
   .d-3of5 {
     float: left;
-    padding-right: 0.75em;
     width: 60%;
   }
 
   .d-4of5 {
     float: left;
-    padding-right: 0.75em;
     width: 80%;
   }
 
   .d-1of6 {
     float: left;
-    padding-right: 0.75em;
     width: 16.6666666667%;
   }
 
   .d-1of7 {
     float: left;
-    padding-right: 0.75em;
     width: 14.2857142857%;
   }
 
   .d-2of7 {
     float: left;
-    padding-right: 0.75em;
     width: 28.5714286%;
   }
 
   .d-3of7 {
     float: left;
-    padding-right: 0.75em;
     width: 42.8571429%;
   }
 
   .d-4of7 {
     float: left;
-    padding-right: 0.75em;
     width: 57.1428572%;
   }
 
   .d-5of7 {
     float: left;
-    padding-right: 0.75em;
     width: 71.4285715%;
   }
 
   .d-6of7 {
     float: left;
-    padding-right: 0.75em;
     width: 85.7142857%;
   }
 
   .d-1of8 {
     float: left;
-    padding-right: 0.75em;
     width: 12.5%;
   }
 
   .d-1of9 {
     float: left;
-    padding-right: 0.75em;
     width: 11.1111111111%;
   }
 
   .d-1of10 {
     float: left;
-    padding-right: 0.75em;
     width: 10%;
   }
 
   .d-1of11 {
     float: left;
-    padding-right: 0.75em;
     width: 9.0909090909%;
   }
 
   .d-1of12 {
     float: left;
-    padding-right: 0.75em;
     width: 8.33%;
   }
 }
@@ -990,6 +951,79 @@ a.featured-link:visited span:before {
   content: "—";
   color: #D3A878;
   padding-right: 10px;
+}
+
+.today {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.today--cntr {
+  background-image: url(http://www.hcdigital.co.uk/london-minster/wp-content/uploads/Minster-Inside@2x.jpg);
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.today--cntr > div {
+  padding: 50px;
+}
+
+.today--events-cntr {
+  border: solid #EBEBE9;
+  border-width: 1px 0;
+  padding: 10px 0;
+  margin: 30px 0 0;
+}
+.today--events-cntr table {
+  width: 100%;
+  font-family: "Futura PT", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+.today--events-cntr td {
+  width: 50%;
+}
+.today--events-cntr td:first-of-type {
+  color: #D3A878;
+  text-transform: uppercase;
+}
+
+a.today--link,
+a.today--link:visited {
+  text-decoration: none;
+  color: #001a2c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  font-size: 20px;
+  border-bottom: 1px solid #EBEBE9;
+}
+a.today--link svg,
+a.today--link:visited svg {
+  height: 35px;
+}
+a.today--link:hover,
+a.today--link:visited:hover {
+  color: #001a2c;
+}
+a.today--link:hover svg g,
+a.today--link:visited:hover svg g {
+  fill: #001a2c;
+}
+a.today--link:hover svg path,
+a.today--link:visited:hover svg path {
+  fill: white;
+}
+
+.today--about-cntr {
+  padding-left: 50px;
+}
+.today--about-cntr p {
+  margin: 40px 0 30px;
 }
 
 /*********************
@@ -1096,18 +1130,10 @@ a.btn, a.comment-reply-link,
   top: 1px;
 }
 
-/*
-An example button. 
-You can use this example if you want. Just replace all the variables
-and it will create a button dependant on those variables.
-*/
-a.btn:hover, a.btn:visited, a.btn:visited:hover, a.btn:focus,
+a.btn:hover, a.btn:visited:hover, a.btn:focus,
 .btn:hover,
 #submit:hover,
 .comment-reply-link:hover,
-.btn:visited,
-#submit:visited,
-.comment-reply-link:visited,
 .btn:visited:hover,
 .btn:focus,
 #submit:focus,
@@ -1123,6 +1149,25 @@ a.btn:active,
   background-color: #D3A878;
   border-color: #D3A878;
   color: white;
+}
+
+a.btn.btn-small, a.btn-small#submit, a.btn-small.comment-reply-link, a.btn.btn-small:visited {
+  display: inline;
+  padding: 0;
+  border-width: 0 0 1px;
+  color: #001a2c;
+  border-color: #001a2c;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 0;
+}
+a.btn.btn-small:hover, a.btn-small#submit:hover, a.btn-small.comment-reply-link:hover, a.btn.btn-small:visited:hover {
+  color: #D3A878;
+  border-color: #D3A878;
+  background-color: unset;
 }
 
 /******************************************************************
@@ -1507,7 +1552,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #001a2c;
-  background-color: #EBEBE9;
+  background-color: #F2F1EF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1569,7 +1614,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 40px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   margin: 0;
 }
 
@@ -1579,9 +1624,13 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.1em;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   font-family: "Futura PT", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #D3A878;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 5px;
 }
 
 h5, .h5 {
@@ -1609,7 +1658,7 @@ HEADER STYLES
   color: #001a2c;
 }
 .header.active .btn:hover, .header.active #submit:hover, .header.active .comment-reply-link:hover {
-  color: #D3A878;
+  color: #FFFFFF;
 }
 
 .inner-header {
@@ -2434,8 +2483,8 @@ you can add resource intensive styles.
 
   ******************************************************************/
   .wrap, ul.sub-menu {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 /*********************
@@ -2454,8 +2503,8 @@ This is for the larger monitors and possibly full screen viewers.
 
   ******************************************************************/
   .wrap, ul.sub-menu {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 /*********************

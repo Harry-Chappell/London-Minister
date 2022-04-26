@@ -608,9 +608,9 @@ body#tinymce.wp-editor p {
   -ms-word-wrap: break-word;
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-      hyphens: auto;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig";

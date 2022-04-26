@@ -53,28 +53,43 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 } // end .button
 
-/*
-An example button. 
-You can use this example if you want. Just replace all the variables
-and it will create a button dependant on those variables.
-*/
+
 a.btn,
 .btn {
-  @extend %btn; // here we load the btn defaults
+  @extend %btn; 
 
   &:hover,
-  &:visited,
   &:visited:hover,
   &:focus {
     background-color: $secondary;
     border-color: $secondary;
     color: white;
-  } // end hover
+  } 
 
   &:active {
     background-color: $secondary;
     border-color: $secondary;
     color: white;
-  } // end active
+  } 
 
-} // end blue button
+} 
+
+a.btn.btn-small, a.btn.btn-small:visited {
+  display: inline;
+  padding: 0;
+  border-width: 0 0 1px;
+  color: $primary;
+  border-color: $primary;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 0;
+  
+  &:hover {
+    color: $secondary;
+    border-color: $secondary;
+    background-color: unset;
+  }
+}
