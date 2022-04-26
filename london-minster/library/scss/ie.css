@@ -253,21 +253,16 @@ GENERAL STYLES
 LAYOUT & GRID STYLES
 *********************/
 .wrap, ul.sub-menu {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
-/*********************
-HEADER STYLES
-*********************/
 /*********************
 NAVIGATION STYLES
 *********************/
 .nav {
   border: 0;
   /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */
 }
 .nav ul {
   background: #FFFFFF;
@@ -309,7 +304,6 @@ NAVIGATION STYLES
   display: flex;
   justify-content: flex-end;
   flex-flow: row wrap;
-  /* highlight sub-menu current page */
 }
 .nav li ul.sub-menu li,
 .nav li ul.children li {
@@ -381,12 +375,13 @@ NAVIGATION STYLES
   top: auto;
   visibility: visible;
 }
+
 /* end .nav */
 header.active .nav li a:hover {
   color: #D3A878;
 }
 header.active .nav li > ul {
-  max-height: 600px;
+  max-height: 700px;
   height: auto;
   opacity: 1;
 }
@@ -409,56 +404,35 @@ SIDEBARS & ASIDES
 }
 .widget ul li {
   margin-bottom: 0.75em;
-  /* deep nesting */
 }
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
 }
 
-/* links widget */
-/* meta widget */
-/* pages widget */
-/* recent-posts widget */
-/* archives widget */
-/* tag-cloud widget */
-/* calendar widget */
-/* category widget */
-/* recent-comments widget */
-/* search widget */
-/* text widget */
-/*********************
-FOOTER STYLES
-*********************/
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links ul li {
-  /*
-  be careful with the depth of your menus.
-  it's very rare to have multi-depth menus in
-  the footer.
-  */
-}
-/* end .footer-links */
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Desktop Stylsheet
-
-This is the desktop size. It's larger than an iPad so it will only
-be seen on the Desktop.
-
-******************************************************************/
 h1, .h1 {
-  font-size: 70px;
+  font-size: 80px;
 }
 
 h2, .h2 {
-  font-size: 25px;
+  font-size: 30px;
+}
+
+h3, .h3 {
+  font-size: 1.5em;
+}
+
+header.active .nav li > ul {
+  max-height: 600px;
+}
+
+.header.active .nav li a.donate-large img {
+  width: 175px;
+}
+
+.header.active .nav li a.donate-large {
+  width: 425px;
+  order: 0;
 }
 
 /*

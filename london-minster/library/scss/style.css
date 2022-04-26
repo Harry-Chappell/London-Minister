@@ -902,6 +902,7 @@ them however you see fit.
   max-height: 1080px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: white;
   display: flex;
   flex-flow: column;
@@ -974,6 +975,30 @@ a.featured-link:visited img {
 a.featured-link:visited div {
     height: 125px;
     padding: 10px 30px;
+  }
+}
+@media (max-width: 1029px) {
+  .featured-links {
+    margin-bottom: 50px;
+  }
+
+  a.featured-link,
+a.featured-link:visited {
+    width: calc((100% - 50px) / 3);
+  }
+  a.featured-link img,
+a.featured-link:visited img {
+    width: 100%;
+    height: 100px;
+  }
+  a.featured-link div,
+a.featured-link:visited div {
+    height: 110px;
+    padding: 10px 20px;
+  }
+  a.featured-link span,
+a.featured-link:visited span {
+    font-size: 14px;
   }
 }
 .today {
@@ -1076,6 +1101,31 @@ a.today--link:visited:hover svg path {
 
   .today--img {
     width: 45%;
+  }
+}
+@media (max-width: 1029px) {
+  .today {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .today--cntr {
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .today--cntr > div {
+    padding: 50px 40px;
+    width: 100%;
+  }
+
+  .today--img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .today--about-cntr {
+    width: 50%;
   }
 }
 /*********************
@@ -1660,19 +1710,19 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 }
 
 h1, .h1 {
-  font-size: 80px;
+  font-size: 70px;
   line-height: 1;
   margin: 0 0 25px;
 }
 
 h2, .h2 {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 1.2em;
   margin: 0;
 }
 
 h3, .h3 {
-  font-size: 1.5em;
+  font-size: 1.25em;
   margin: 0;
 }
 
@@ -1717,10 +1767,12 @@ HEADER STYLES
 .inner-header {
   display: flex;
   justify-content: flex-end;
+  flex-flow: row wrap;
+  align-items: flex-end;
 }
 .inner-header > .btn, .inner-header > #submit, .inner-header > .comment-reply-link {
   margin-left: 15px;
-  margin-top: 69px;
+  margin-top: 20px;
 }
 .inner-header .widget_search {
   display: none;
@@ -1785,7 +1837,7 @@ and more scalable.
 
 /* end .nav */
 @media (max-width: 1239px) {
-  ul.top-mav > li > a {
+  ul.top-nav > li > a {
     font-size: 13px;
     padding: 0 10px 12px;
   }
@@ -1805,6 +1857,8 @@ and more scalable.
   font-weight: 500;
   transition: 0s;
   margin-right: auto;
+  order: 1;
+  width: 100%;
 }
 .header.active .nav li a.donate-large div {
   padding: 20px;
@@ -1823,7 +1877,7 @@ and more scalable.
   padding-right: 10px;
 }
 .header.active .nav li a.donate-large img {
-  width: 175px;
+  width: 50%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2335,21 +2389,16 @@ you can add resource intensive styles.
   LAYOUT & GRID STYLES
   *********************/
   .wrap, ul.sub-menu {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
-  /*********************
-  HEADER STYLES
-  *********************/
   /*********************
   NAVIGATION STYLES
   *********************/
   .nav {
     border: 0;
     /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */
   }
   .nav ul {
     background: #FFFFFF;
@@ -2391,7 +2440,6 @@ you can add resource intensive styles.
     display: flex;
     justify-content: flex-end;
     flex-flow: row wrap;
-    /* highlight sub-menu current page */
   }
   .nav li ul.sub-menu li,
 .nav li ul.children li {
@@ -2463,12 +2511,13 @@ you can add resource intensive styles.
     top: auto;
     visibility: visible;
   }
+
   /* end .nav */
   header.active .nav li a:hover {
     color: #D3A878;
   }
   header.active .nav li > ul {
-    max-height: 600px;
+    max-height: 700px;
     height: auto;
     opacity: 1;
   }
@@ -2491,40 +2540,11 @@ you can add resource intensive styles.
   }
   .widget ul li {
     margin-bottom: 0.75em;
-    /* deep nesting */
   }
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
   }
-
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  you'll probably need to do quite a bit
-  of overriding here if you styled them for
-  mobile. Make sure to double check these!
-  */
-  .footer-links ul li {
-    /*
-    be careful with the depth of your menus.
-    it's very rare to have multi-depth menus in
-    the footer.
-    */
-  }
-  /* end .footer-links */
 }
 /*********************
 DESKTOP
@@ -2533,22 +2553,29 @@ in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 1030px) {
-  /******************************************************************
-  Site Name:
-  Author:
-
-  Stylesheet: Desktop Stylsheet
-
-  This is the desktop size. It's larger than an iPad so it will only
-  be seen on the Desktop.
-
-  ******************************************************************/
   h1, .h1 {
-    font-size: 70px;
+    font-size: 80px;
   }
 
   h2, .h2 {
-    font-size: 25px;
+    font-size: 30px;
+  }
+
+  h3, .h3 {
+    font-size: 1.5em;
+  }
+
+  header.active .nav li > ul {
+    max-height: 600px;
+  }
+
+  .header.active .nav li a.donate-large img {
+    width: 175px;
+  }
+
+  .header.active .nav li a.donate-large {
+    width: 425px;
+    order: 0;
   }
 }
 /*********************

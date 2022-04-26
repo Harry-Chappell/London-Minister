@@ -1,23 +1,24 @@
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Desktop Stylsheet
-
-This is the desktop size. It's larger than an iPad so it will only
-be seen on the Desktop.
-
-******************************************************************/
-
-.wrap, ul.sub-menu {
-	// padding-left: 100px;
-	// padding-right: 100px;
-}
-
 h1, .h1 {
-	font-size: 70px;
+	font-size: 80px;
 }
 
 h2, .h2 {
-	font-size: 25px;
+	font-size: 30px;
+}
+
+h3, .h3 {
+	font-size: 1.5em;
+}
+
+header.active .nav li > ul {
+	max-height: 600px;
+}
+.header.active .nav li a.donate-large img {
+	width: 175px;
+}
+
+
+.header.active .nav li a.donate-large {
+    width: 425px;
+	order: 0;
 }
