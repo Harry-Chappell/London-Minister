@@ -330,6 +330,7 @@ NAVIGATION STYLES
   display: flex;
   align-items: center;
   margin-bottom: 25px;
+  max-width: calc((100% - 75px) / 4);
   /*
   if you need to go deeper, go nuts
   just remember deeper menus suck
@@ -338,7 +339,7 @@ NAVIGATION STYLES
 }
 .nav li ul.sub-menu li:not(:first-of-type),
 .nav li ul.children li:not(:first-of-type) {
-  margin-left: 40px;
+  margin-left: 25px;
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -356,6 +357,7 @@ NAVIGATION STYLES
   height: 135px;
   -o-object-fit: cover;
      object-fit: cover;
+  max-width: 100%;
 }
 .nav li ul.sub-menu li a span,
 .nav li ul.children li a span {
@@ -442,17 +444,28 @@ h3, .h3 {
   font-size: 1.5em;
 }
 
-header.active .nav li > ul {
+.header.active .nav li > ul {
   max-height: 600px;
+}
+
+.header.active .nav li a.donate-large {
+  width: 425px;
+  margin-right: auto;
+  margin-left: 0;
+  order: 0;
 }
 
 .header.active .nav li a.donate-large img {
   width: 175px;
 }
 
-.header.active .nav li a.donate-large {
-  width: 425px;
-  order: 0;
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  max-width: unset;
+}
+.nav li ul.sub-menu li:not(:first-of-type),
+.nav li ul.children li:not(:first-of-type) {
+  margin-left: 40px;
 }
 
 /*

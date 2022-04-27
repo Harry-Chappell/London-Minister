@@ -105,9 +105,10 @@ NAVIGATION STYLES
 				display: flex;
 				align-items: center;
 				margin-bottom: 25px;
+				max-width: calc((100% - (25px * 3)) / 4);
 
 				&:not(:first-of-type) {
-					margin-left: 40px;
+					margin-left: 25px;
 				}
 
 				a {
@@ -123,6 +124,7 @@ NAVIGATION STYLES
 						width: 200px;
 						height: 135px;
 						object-fit: cover;
+						max-width: 100%;
 					}
 
 					span {

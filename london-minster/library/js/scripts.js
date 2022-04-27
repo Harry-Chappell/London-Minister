@@ -30,7 +30,7 @@ function menuToggle() {
 		
 jQuery(document).ready(function($) {
 
-  $("html nav > ul > li.menu-item-has-children > a").after('<button class="expander"></button>');
+  $("html nav > ul > li.menu-item-has-children > a").after('<button class="expander touch-show d-hide t-hide"></button>');
 $('html nav > ul > li button.expander').click(function(e) {
 $(this).toggleClass("expanded");
 

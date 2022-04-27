@@ -26,7 +26,8 @@ body {
 }
 
 .hide,
-.hide-until-load:not(.show) {
+.hide-until-load:not(.show),
+html.no-touch .touch-show {
 	display: none !important;
 }
 
@@ -231,9 +232,10 @@ and more scalable.
     letter-spacing: 0;
     font-weight: 500;
     transition: 0s;
-	margin-right: auto;
+	margin-left: auto;
 	order: 1;
 	width: 100%;
+	max-width: 500px;
 
 	div {
 		padding: 20px;

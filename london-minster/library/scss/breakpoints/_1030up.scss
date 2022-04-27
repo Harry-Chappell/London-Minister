@@ -10,15 +10,23 @@ h3, .h3 {
 	font-size: 1.5em;
 }
 
-header.active .nav li > ul {
+.header.active .nav li > ul {
 	max-height: 600px;
+}
+.header.active .nav li a.donate-large {
+	width: 425px;
+	margin-right: auto;
+	margin-left: 0;
+	order: 0;
 }
 .header.active .nav li a.donate-large img {
 	width: 175px;
 }
+.nav li ul.sub-menu li, 
+.nav li ul.children li {
+	max-width: unset;
 
-
-.header.active .nav li a.donate-large {
-    width: 425px;
-	order: 0;
+	&:not(:first-of-type) {
+		margin-left: 40px;
+	}
 }
