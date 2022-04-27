@@ -29,6 +29,31 @@ LAYOUT & GRID STYLES
 
 
 /*********************
+HEADER STYLES
+*********************/
+
+.header {
+	position: absolute;
+	width: 100%;
+	background-color: rgba(white, 0);
+	transition: 0.2s;
+
+	&.active {
+		background-color: $white;
+		padding-bottom: 25px;
+
+		.nav li a, .btn {
+			color: $primary;
+		}
+
+		.btn:hover {
+			color: $white;
+		}
+	}
+}
+
+
+/*********************
 NAVIGATION STYLES
 *********************/
 

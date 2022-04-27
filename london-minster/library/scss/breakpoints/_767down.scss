@@ -1,0 +1,152 @@
+// Header
+
+
+header.header {
+    position: absolute;
+    width: 100%;
+}
+.inner-header {
+    justify-content: space-between;
+    &> nav {
+        position: fixed;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        max-width: 400px;
+        padding: 90px 0;
+        left: 0;
+        top: 0;
+        background: white;
+        transition: 0.2s;
+        transform: translateX(-100%);
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        &> ul > li {
+            &> a {
+                height: auto;
+                color: $primary;
+                font-size: 20px;
+                padding: 10px 15px;
+            }
+            ul.sub-menu {
+                display: none;
+            }
+
+            .expanded + ul.sub-menu, 
+            &:hover ul.sub-menu, 
+            &:focus ul.sub-menu {
+                display: flex;
+            }
+        }
+    }
+
+    .btn {
+        margin-left: auto;
+    }
+}
+.admin-bar .inner-header > nav {
+    padding: 122px 0 90px;
+}
+
+.nav li.menu-item-has-children .expander {
+    display: none;
+} 
+.nav li.menu-item-has-children > a:after, 
+.nav li.menu-item-has-children > a:before {
+    top: 25px;
+}
+
+html.touch {
+    .nav li.menu-item-has-children {
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
+
+        a:before, a:after {
+            display: none;
+        }
+
+        a {
+            width: calc(100% - 50px);
+            height: 50px;
+        }
+
+        .expander {
+            width: 100%;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            background: none;
+            display: flex;
+
+            &:before, &:after {
+                content: " ";
+                position: absolute;
+                background-color: $secondary;
+                height: 6px;
+                width: 1.5px;
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+                right: 22px;
+                transition: 0.2s;
+            }
+
+            &:before {
+                transform: translateY(-50%) rotate(-45deg);
+                right: 25px;
+            }
+
+            &.expanded:before {
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            &.expanded:after {
+                transform: translateY(-50%) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.menu-btn {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+
+    &:before, &:after {
+        content: " ";
+        position: absolute;
+        height: 3px;
+        width: 40px;
+        background: white;
+        border-radius: 10px;
+        top: 50%;
+        transform: translateY(calc(50% - 5px));
+        transition: all 0.2s, background 0s;
+    }
+
+    &:after {
+        transform: translateY(calc(50% + 5px));
+        width: 25px;
+    }
+    
+    &.active:before, &.active:after {
+        background: $primary;
+        transform: translateY(-50%) rotate(45deg);
+        width: 30px;
+    }
+    
+    &.active:after {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    &:hover:before, &:hover:after,
+    &.active:hover:before, &.active:hover:after {
+        background: $secondary;
+    }
+}

@@ -18,6 +18,31 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Menu Toggle
+function menuToggle() {
+  var nav = document.querySelector(".inner-header > nav");
+  var navBtn = document.querySelector(".menu-btn");
+    nav.classList.toggle("active");
+    navBtn.classList.toggle("active");
+}
+
+
+		
+jQuery(document).ready(function($) {
+
+  $("html nav > ul > li.menu-item-has-children > a").after('<button class="expander"></button>');
+$('html nav > ul > li button.expander').click(function(e) {
+$(this).toggleClass("expanded");
+
+  if ($('html nav > ul > li.menu-item-has-children').next('ul.sub-menu').children().length !== 0) {
+      e.preventDefault();
+  }
+
+})
+
+});
+
+
 window.onload = function() {
   var donateLarge = document.querySelector('.donate-large');
   var subMenus = document.getElementsByClassName('sub-menu');

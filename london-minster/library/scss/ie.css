@@ -258,6 +258,26 @@ LAYOUT & GRID STYLES
 }
 
 /*********************
+HEADER STYLES
+*********************/
+.header {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 0.2s;
+}
+.header.active {
+  background-color: #FFFFFF;
+  padding-bottom: 25px;
+}
+.header.active .nav li a, .header.active .btn {
+  color: #001a2c;
+}
+.header.active .btn:hover {
+  color: #FFFFFF;
+}
+
+/*********************
 NAVIGATION STYLES
 *********************/
 .nav {

@@ -1747,23 +1747,6 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
-.header {
-  position: absolute;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0);
-  transition: 0.2s;
-}
-.header.active {
-  background-color: #FFFFFF;
-  padding-bottom: 25px;
-}
-.header.active .nav li a, .header.active .btn, .header.active #submit, .header.active .comment-reply-link {
-  color: #001a2c;
-}
-.header.active .btn:hover, .header.active #submit:hover, .header.active .comment-reply-link:hover {
-  color: #FFFFFF;
-}
-
 .inner-header {
   display: flex;
   justify-content: flex-end;
@@ -2394,6 +2377,26 @@ you can add resource intensive styles.
   }
 
   /*********************
+  HEADER STYLES
+  *********************/
+  .header {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.2s;
+  }
+  .header.active {
+    background-color: #FFFFFF;
+    padding-bottom: 25px;
+  }
+  .header.active .nav li a, .header.active .btn, .header.active .comment-reply-link, .header.active #submit {
+    color: #001a2c;
+  }
+  .header.active .btn:hover, .header.active .comment-reply-link:hover, .header.active #submit:hover {
+    color: #FFFFFF;
+  }
+
+  /*********************
   NAVIGATION STYLES
   *********************/
   .nav {
@@ -2544,6 +2547,137 @@ you can add resource intensive styles.
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header.header {
+    position: absolute;
+    width: 100%;
+  }
+
+  .inner-header {
+    justify-content: space-between;
+  }
+  .inner-header > nav {
+    position: fixed;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    max-width: 400px;
+    padding: 90px 0;
+    left: 0;
+    top: 0;
+    background: white;
+    transition: 0.2s;
+    transform: translateX(-100%);
+  }
+  .inner-header > nav.active {
+    transform: translateX(0);
+  }
+  .inner-header > nav > ul > li > a {
+    height: auto;
+    color: #001a2c;
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+  .inner-header > nav > ul > li ul.sub-menu {
+    display: none;
+  }
+  .inner-header > nav > ul > li .expanded + ul.sub-menu, .inner-header > nav > ul > li:hover ul.sub-menu, .inner-header > nav > ul > li:focus ul.sub-menu {
+    display: flex;
+  }
+  .inner-header .btn, .inner-header .comment-reply-link, .inner-header #submit {
+    margin-left: auto;
+  }
+
+  .admin-bar .inner-header > nav {
+    padding: 122px 0 90px;
+  }
+
+  .nav li.menu-item-has-children .expander {
+    display: none;
+  }
+
+  .nav li.menu-item-has-children > a:after,
+.nav li.menu-item-has-children > a:before {
+    top: 25px;
+  }
+
+  html.touch .nav li.menu-item-has-children {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+  }
+  html.touch .nav li.menu-item-has-children a:before, html.touch .nav li.menu-item-has-children a:after {
+    display: none;
+  }
+  html.touch .nav li.menu-item-has-children a {
+    width: calc(100% - 50px);
+    height: 50px;
+  }
+  html.touch .nav li.menu-item-has-children .expander {
+    width: 100%;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    background: none;
+    display: flex;
+  }
+  html.touch .nav li.menu-item-has-children .expander:before, html.touch .nav li.menu-item-has-children .expander:after {
+    content: " ";
+    position: absolute;
+    background-color: #D3A878;
+    height: 6px;
+    width: 1.5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    right: 22px;
+    transition: 0.2s;
+  }
+  html.touch .nav li.menu-item-has-children .expander:before {
+    transform: translateY(-50%) rotate(-45deg);
+    right: 25px;
+  }
+  html.touch .nav li.menu-item-has-children .expander.expanded:before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  html.touch .nav li.menu-item-has-children .expander.expanded:after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  .menu-btn {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu-btn:before, .menu-btn:after {
+    content: " ";
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background: white;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(calc(50% - 5px));
+    transition: all 0.2s, background 0s;
+  }
+  .menu-btn:after {
+    transform: translateY(calc(50% + 5px));
+    width: 25px;
+  }
+  .menu-btn.active:before, .menu-btn.active:after {
+    background: #001a2c;
+    transform: translateY(-50%) rotate(45deg);
+    width: 30px;
+  }
+  .menu-btn.active:after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .menu-btn:hover:before, .menu-btn:hover:after, .menu-btn.active:hover:before, .menu-btn.active:hover:after {
+    background: #D3A878;
   }
 }
 /*********************
